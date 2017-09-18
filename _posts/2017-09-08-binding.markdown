@@ -1,0 +1,49 @@
+---
+layout: post
+title:  "Implicit and Explicit Binding"
+date:   2017-09-08
+categories: anjali update
+---
+When a function is created, a keyword called this is created, which links to the object in which the function operates.
+The this keyword’s value has nothing to do with the function itself, how the function is called determines the this value.
+
+Implicit Binding
+
+var myMethod = function () {
+  console.log(this);
+};
+
+var myObject = {
+  myMethod: myMethod
+};
+myObject in the code is given a property called myMethod, which points to the myMethod function. When the myMethod function is called from the global scope, this refers to the window object. When it is called as a method of myObject, this refers to myObject.
+
+myObject.myMethod() // this === myObject
+myMethod() // this === window
+This is Implicit Binding.
+
+Explicit Binding
+
+Explicit binding is when we explicitly bind a context to the function. This is done with call() or apply()
+
+var myMethod = function () {
+  console.log(this);
+};
+
+var myObject = {
+  myMethod: myMethod
+};
+
+myMethod() // this === window
+myMethod.call(myObject, args1, args2, ...) // this === myObject
+myMethod.apply(myObject, [array of args]) // this === myObject
+
+Hard Binding
+
+This is done with bind(). bind() returns a new function that is hard-coded to call the original function with the this context set as you specified.
+
+Hard binding takes precedence over explicit binding.
+
+myMethod = myMethod.bind(myObject);
+
+myMethod(); // this === myObject
