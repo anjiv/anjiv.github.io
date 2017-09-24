@@ -4,7 +4,7 @@ title:  "Implicit and Explicit Binding"
 date:   2017-09-08
 categories: anjali update
 ---
-When a function is created, a keyword called this is created, which links to the object in which the function operates.
+When a function is created, a keyword called "this" is created, which links to the object in which the function operates.
 The this keyword’s value has nothing to do with the function itself, how the function is called determines the this value.
 
 ### Implicit Binding
