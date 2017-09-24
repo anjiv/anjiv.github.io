@@ -8,87 +8,89 @@ categories: anjali update
 The Flexbox Layout aims at providing a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown and/or dynamic.
 
 A flex container is declared by setting the display property of an element to flex.
-
+``` css
+display: flex;
+```
 Inside a flex container there is one or more flex items.
 
-Properties for flex container
+### Properties for flex container
 
-#flex-direction
+> ### flex-direction
 
 The flex-direction property specifies the direction of the flex items inside the flex container. The default value of flex-direction is row.
 
 The other values are as follows:
-row-reverse: right to left in ltr; left to right in rtl
-column: top to bottom layout
-column-reverse: bottom to top layout
+1. row-reverse: right to left in ltr; left to right in rtl
+2. column: top to bottom layout
+3. column-reverse: bottom to top layout
 
-#flex-wrap
+> ### flex-wrap
 
 The flex-wrap property specifies whether the flex items should wrap(come in next line) or not, if there is not enough space for them in one line.
 
 The possible values are as follows:
-nowrap (default): all flex items to be in one line
-wrap: flex items will appear in multiple lines, from top to bottom.
-wrap-reverse: flex items will appear in multiple lines from bottom to top.
+1. nowrap (default): all flex items to be in one line
+2. wrap: flex items will appear in multiple lines, from top to bottom.
+3. wrap-reverse: flex items will appear in multiple lines from bottom to top.
 
-#flex-flow
+> ### flex-flow
 
 This is a shorthand flex-direction and flex-wrap properties together. Default is row nowrap.
 
-#justify-content
+> ### justify-content
 
 The justify-content property horizontally aligns the flexible container's items.
 
 The possible values are as follows:
-flex-start (default): items come together toward the start line
-flex-end: items come together toward to end line
-center: items are center aline
-space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
-space-around: items are evenly distributed in the line with equal space around them. The spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space, but two units of space between the next item because that next item has its own spacing that applies.
-space-evenly: items are distributed so that the spacing between any two items is equal.
+1. flex-start (default): items come together toward the start line
+2. flex-end: items come together toward to end line
+3. center: items are center aline
+4. space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+5. space-around: items are evenly distributed in the line with equal space around them. The spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space, but two units of space between the next item because that next item has its own spacing that applies.
+6. space-evenly: items are distributed so that the spacing between any two items is equal.
 
-#align-items
+> ### align-items
 
 The align-items property vertically aligns the flex items when the items do not use all available space.
 
 The possible values are as follows:
-flex-start: cross-start margin edge of the items is placed on the cross-start line
-flex-end: cross-end margin edge of the items is placed on the cross-end line
-center: items are centered in the cross-axis
-baseline: items are aligned such as their baselines align
-stretch (default): stretch to fill the container (still respect min-width/max-width)
+1. flex-start: cross-start margin edge of the items is placed on the cross-start line
+2. flex-end: cross-end margin edge of the items is placed on the cross-end line
+3. center: items are centered in the cross-axis
+4. baseline: items are aligned such as their baselines align
+5. stretch (default): stretch to fill the container (still respect min-width/max-width)
 
-#align-content
+> ### align-content
 
 The align-content property modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines.
 
 The possible values are as follows:
-flex-start: lines come together to the start of the container
-flex-end: lines come together to the end of the container
-center: lines come together to the center of the container
-space-between: lines evenly distributed; the first line is at the start of the container while the last one is at the end
-space-around: lines evenly distributed with equal space around each line
-stretch (default): lines stretch to take up the remaining space
+1. flex-start: lines come together to the start of the container
+2. flex-end: lines come together to the end of the container
+3. center: lines come together to the center of the container
+4. space-between: lines evenly distributed; the first line is at the start of the container while the last one is at the end
+5. space-around: lines evenly distributed with equal space around each line
+6. stretch (default): lines stretch to take up the remaining space
 
-Properties for flex items
+### Properties for flex items
 
-#order
+> ### order
 
-The order property controls the order in which the flex items appear in the flex container. It is an integer value.
+The order property controls the order in which they appear in the flex container. It is an integer value.
 
-#flex-grow
+> ### flex-grow
 
 It specifies what amount of the available space inside the flex container the item should take up i.e. the ability for a flex item to grow. Negative numbers are invalid.
 
-#flex-shrink
+> ### flex-shrink
 
 This defines the ability for a flex item to shrink. Negative numbers are invalid.
 
-#flex-basis
+> ### flex-basis
 
 It defines the default size of an element before the remaining space is distributed.
 
-#flex
+> ### flex
 
 This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters are optional. Default is 0 1 auto.
 
